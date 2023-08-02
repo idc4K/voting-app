@@ -1,0 +1,59 @@
+scalar Date
+scalar JSON
+
+############# QUERY #############
+type Query {
+    findAll:userType
+    # findOneContractLevel(id: Int!):ContractLevelType
+}
+############# QUERY #############
+
+############# MUTATION #############
+# type Mutation {
+#     createContractLevel(data: ContractLevelCreateInput): ContractLevelType
+#     updateContractLevel(data: ContractLevelUpdateInput): ContractLevelType
+#     removeContractLevel(data: RemoveItemInput): Boolean
+# }
+############# MUTATION #############
+
+############# TYPE #############
+type userType {
+    id: Int
+    userName: String
+    email: String
+    firstName: String
+    active: Boolean
+    createdAt: Date
+    updatedAt: Date
+    deletedAt: Date
+    # createdBy: String
+    # updatedBy: String
+}
+
+# type ContractLevelPaginationResultType {
+#     result: [ContractLevelType!]
+#     pagination: PaginationType
+# }
+############# TYPE #############
+
+
+############# INPUT #############
+# input ContractLevelFilterInput {
+#     id: Int
+#     ids: [Int!]
+#     search: String
+#     title: String
+#     titles: [String!]
+# }
+
+# input ContractLevelCreateInput {
+#     title: String
+#     active: Boolean
+# }
+
+# input ContractLevelUpdateInput {
+#     id: Int
+#     title: String
+#     active: Boolean
+# }
+############# INPUT #############
