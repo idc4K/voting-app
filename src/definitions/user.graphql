@@ -9,11 +9,11 @@ type Query {
 ############# QUERY #############
 
 ############# MUTATION #############
-# type Mutation {
-#     createContractLevel(data: ContractLevelCreateInput): ContractLevelType
+type Mutation {
+    createUser(data: SignUpInput): userType
 #     updateContractLevel(data: ContractLevelUpdateInput): ContractLevelType
 #     removeContractLevel(data: RemoveItemInput): Boolean
-# }
+}
 ############# MUTATION #############
 
 ############# TYPE #############
@@ -22,6 +22,7 @@ type userType {
     userName: String
     email: String
     firstName: String
+    password: String
     active: Boolean
     createdAt: Date
     updatedAt: Date
@@ -46,10 +47,12 @@ type userType {
 #     titles: [String!]
 # }
 
-# input ContractLevelCreateInput {
-#     title: String
-#     active: Boolean
-# }
+input SignUpInput {
+   userName:String
+   firstName: String
+   email:String
+   password: String
+}
 
 # input ContractLevelUpdateInput {
 #     id: Int
