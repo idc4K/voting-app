@@ -8,7 +8,7 @@ export class UserEntity {
     /**
      * Id of user
      */
-    @PrimaryGeneratedColumn()
+    @PrimaryGeneratedColumn('uuid')
     id?: number;
 
     /**

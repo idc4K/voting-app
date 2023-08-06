@@ -8,6 +8,8 @@ export const typeOrmConfig: TypeOrmModuleOptions = {
     database: process.env.DATABASE,
     entities: ['dist/entities/*.entity{.ts,.js}'],
     synchronize: true,
-    logging: true
+    logging: true,
+    subscribers: ['dist/user/subscribers/*.subscriber{.ts,.js}'],
+
 
 }

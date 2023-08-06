@@ -20,13 +20,9 @@ export class UserService {
   }
 
   async SignUp(signUpInput: SignUpInput): Promise<UserEntity> {
-    if (!signUpInput.email) {
-      throw new Error("missing email");
+    if (!signUpInput.email && !signUpInput) {
+      throw new Error("Invalid signUpInput object or missing email");
     }
-    if (!signUpInput) {
-      throw new Error("invalid signUpInput object or ");
-    }
-
     const existingUser = await this.userRepo.findOne({ where: { email: signUpInput.email } });
 
     if (existingUser) {

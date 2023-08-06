@@ -18,5 +18,5 @@ export class SignUpInput {
 
   @IsBoolean()
   @IsOptional()
-  isActive?: boolean = true;
+  active?: boolean = true;
 }
