@@ -2,7 +2,7 @@ import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { Module } from '@nestjs/common';
 import { GraphQLModule } from '@nestjs/graphql';
 import { join } from 'path';
-import { UserModule } from './user/user.module';
+import { UserModule } from './modules/user/user.module';
 import { typeOrmConfig } from './config/typeOrmConfig';
 import { TypeOrmModule } from '@nestjs/typeorm';
 

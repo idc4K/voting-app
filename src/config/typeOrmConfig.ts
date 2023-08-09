@@ -9,7 +9,7 @@ export const typeOrmConfig: TypeOrmModuleOptions = {
     entities: ['dist/entities/*.entity{.ts,.js}'],
     synchronize: true,
     logging: true,
-    subscribers: ['dist/user/subscribers/*.subscriber{.ts,.js}'],
+    subscribers: ['dist/modules/user/subscribers/*.subscriber{.ts,.js}'],
 
 
 }
